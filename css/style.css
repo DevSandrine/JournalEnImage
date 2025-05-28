@@ -173,9 +173,13 @@
 }
 
 /* Titre du nom centré, plus petit que le h1 par défaut, même police et couleur */
-.name-title {
-  font-size: 2.2em; /* un peu plus grand */
+.titre-cursive {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  text-align: center;
+  color: #333;
 }
+
 
 /* Pour la photo : */
 .profile-pic-centered {
@@ -219,3 +223,39 @@
     max-width: 100px;
   }
 }
+
+
+<!---music--->
+
+		.custom-audio-player {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.cover-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.track-info {
+  flex-grow: 1;
+}
+
+.track-info h3 {
+  font-size: 1em;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+audio {
+  width: 20%;
+}
+
