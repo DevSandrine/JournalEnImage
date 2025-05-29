@@ -53,7 +53,8 @@
     background: white;
     padding: 10px;
     border-radius: 5px;
-    overflow: hidden;
+    /* suppression de overflow:hidden pour ne pas couper le texte */
+    /* overflow: hidden; */
 }
 
 .portfolio-group img {
@@ -65,7 +66,10 @@
 }
 
 .portfolio-group .detail {
-    padding: 0 5px;
+    padding: 0 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .portfolio-group .detail h3 {
@@ -81,6 +85,7 @@
     line-height: 1.3em;
     margin-bottom: 8px;
     font-weight: normal;
+    word-break: break-word; /* force la coupure des mots longs */
 }
 
 .portfolio-group .btn {
@@ -305,5 +310,3 @@ audio {
     padding: 20px;
     border-radius: 15px;
 }
-
-/* Pas besoin de toucher à .titre-cursive, .profile-pic-centered, ni .custom-audio-player */
