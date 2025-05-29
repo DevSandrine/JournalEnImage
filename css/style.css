@@ -89,17 +89,23 @@
 }
 
 .portfolio-group .btn {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 6px;       /* padding réduit pour moins de hauteur */
     background-color: white;
     color: black;
     font-weight: normal;
     cursor: pointer;
     border-radius: 3px;
-    text-align: center;
-    user-select: none;
     border: 1px solid black;
+    font-size: 0.6em;       /* taille police réduite */
+    max-width: 80px;        /* largeur max réduite */
+    white-space: nowrap;
+    user-select: none;
+    line-height: 1;
+    height: 24px;           /* hauteur fixe réduite */
+    box-sizing: border-box; /* pour inclure la bordure dans la hauteur */
     transition: background-color 0.3s ease;
 }
 
