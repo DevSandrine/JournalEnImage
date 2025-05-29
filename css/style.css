@@ -162,10 +162,10 @@
         margin-bottom: 6px;
     }
 
-    .portfolio-group .btn {
+    /*.portfolio-group .btn {
         padding: 5px 8px;
         font-size: 0.8em;
-    }
+    }*/
 }
 
 @media (max-width: 400px) {
