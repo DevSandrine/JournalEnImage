@@ -333,8 +333,17 @@ http://www.templatemo.com/tm-413-flip-turn
 			};
 			paginationContainer.appendChild(prev);
 
-			// Numéros de page
-			for (let i = 1; i <= totalPages; i++) {
+			// Calcul du bloc de pages à afficher (3 pages max)
+			let startPage = Math.max(1, currentPage - 1);
+			let endPage = Math.min(totalPages, startPage + 2);
+
+			// Ajuster startPage si on est en fin de pagination
+			if (endPage - startPage < 2) {
+				startPage = Math.max(1, endPage - 2);
+			}
+
+			// Création des numéros de pages à afficher
+			for (let i = startPage; i <= endPage; i++) {
 				const li = document.createElement("li");
 				li.textContent = i;
 				li.className = i === currentPage ? "active" : "";
@@ -362,6 +371,7 @@ http://www.templatemo.com/tm-413-flip-turn
 				},
 			});
 		});
+
 	</script>
 </body>
 
