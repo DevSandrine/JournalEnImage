@@ -56,6 +56,23 @@ http://www.templatemo.com/tm-413-flip-turn
 
 			<div id="portfolio-content" class="center-text">
 				<!-- Photos du plus récent au plus ancien -->
+
+				<div class="portfolio-group">
+					<a class="portfolio-item" href="videos/lacvi.mp4">
+						<img src="images/lacvi.jpeg" alt="au rythme du lac" />
+						<div class="detail">
+							<h3>Au Rythme du Lac</h3>
+							<p>
+								 Ce lac tranquille est un havre de paix, <br>
+								 On y voit les cygnes glisser doucement,<br> 
+								 Tandis que les canards voguent sur l’eau claire,<br> 
+								 Quand le soleil éclaire la surface, tout devient apaisant,<br> 
+								 Comme suspendu dans le temps. 
+							</p>
+							<span class="btn">Voir Vidéo</span>
+						</div>
+					</a>
+				</div>
 				
 				<div class="portfolio-group">
 				    <a class="portfolio-item" href="images/pringtemps.jpeg">
@@ -367,16 +384,28 @@ http://www.templatemo.com/tm-413-flip-turn
 			paginationContainer.appendChild(next);
 		}
 
+		//video
+
 		document.addEventListener("DOMContentLoaded", () => {
 			showPage(1);
 
 			$(".portfolio-item").magnificPopup({
-				type: "image",
 				gallery: {
 					enabled: true,
 				},
+				callbacks: {
+					elementParse: function (item) {
+						if (item.el.attr('href').endsWith('.mp4')) {
+							item.type = 'iframe';  // Pour lire les vidéos mp4 dans une iframe
+							item.src = item.el.attr('href');
+						} else {
+							item.type = 'image';
+						}
+					}
+				}
 			});
 		});
+
 
 	</script>
 </body>
