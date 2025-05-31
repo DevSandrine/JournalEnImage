@@ -350,3 +350,23 @@ audio {
   opacity: 1;
 }
 
+/* Animation de défilement */
+.scroll-text {
+  max-height: 100px;       /* Limite visible pour forcer le scroll */
+  overflow-y: auto;        /* Scroll vertical manuel */
+  overflow-x: hidden;
+  padding-right: 5px;
+}
+
+/* Optionnel pour une belle scrollbar */
+.scroll-text::-webkit-scrollbar {
+  width: 5px;
+}
+.scroll-text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+.scroll-text::-webkit-scrollbar-track {
+  background: transparent;
+}
+
