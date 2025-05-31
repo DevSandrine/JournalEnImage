@@ -352,7 +352,7 @@ audio {
 
 /* Animation de défilement */
 .scroll-text {
-  max-height: 100px;       /* Limite visible pour forcer le scroll */
+  max-height: 168px;       /* Limite visible pour forcer le scroll */
   overflow-y: auto;        /* Scroll vertical manuel */
   overflow-x: hidden;
   padding-right: 5px;
