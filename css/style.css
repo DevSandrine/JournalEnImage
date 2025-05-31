@@ -307,3 +307,46 @@ audio {
     filter: drop-shadow(0 1px 1px rgba(255, 220, 180, 0.1));
     cursor: pointer;
 }
+
+
+/*video*/
+
+/* Fond sombre un peu transparent derrière la popup */
+.mfp-bg {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Fenêtre popup : bord arrondi, ombre, taille max */
+.mfp-content {
+  max-width: 90vw;       /* largeur max 90% de l'écran */
+  max-height: 80vh;      /* hauteur max 80% de l'écran */
+  border-radius: 12px;   /* arrondir les coins */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7); /* ombre portée */
+  background: #111;      /* fond presque noir */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Style des images à l’intérieur */
+.mfp-img {
+  border-radius: 12px;
+  max-width: 100% !important;
+  max-height: 80vh !important;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* Bouton de fermeture plus gros et visible */
+.mfp-close {
+  color: white !important;
+  font-size: 28px !important;
+  top: 16px !important;
+  right: 24px !important;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.mfp-close:hover {
+  opacity: 1;
+}
+
