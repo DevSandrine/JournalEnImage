@@ -391,3 +391,52 @@ audio {
 .portfolio-group[data-pinned="true"]:hover::before {
   color: #ff0000; /* couleur plus vive au hover */
 }
+
+
+/* Bloc carousel spécifique */
+
+.carousel-group {
+  height: 100%; /* s’assurer que le bloc s’ajuste comme les autres */
+}
+
+.carousel-group .carousel-images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+/* Images dans le carrousel */
+.carousel-group .carousel-images {
+  position: relative;
+  height: 250px;
+  width: 109%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.carousel-group .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.carousel-group .carousel-item.active {
+  display: block;
+  z-index: 2;
+}
+
+.carousel-group .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
