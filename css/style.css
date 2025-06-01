@@ -370,3 +370,30 @@ audio {
   background: transparent;
 }
 
+/* Style pour les blocs épinglés */
+.portfolio-group[data-pinned="true"] {
+  position: relative;
+}
+
+.portfolio-group[data-pinned="true"]::before {
+  content: "📌";
+  position: absolute;
+  top: 8px;      /* espace en haut */
+  left: 8px;     /* espace à gauche */
+  background: rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-size: 1.4em;
+  padding: 6px 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  pointer-events: none; /* ne gêne pas les clics */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10; /* au-dessus de l’image */
+}
+
+.portfolio-group[data-pinned="true"]:hover::before {
+  background: rgba(255, 255, 255, 0.95);
+  color: #ff5a5a;
+  box-shadow: 0 4px 14px rgba(255, 90, 90, 0.6);
+}
