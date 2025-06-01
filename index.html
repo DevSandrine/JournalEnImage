@@ -57,6 +57,25 @@ http://www.templatemo.com/tm-413-flip-turn
 			<div id="portfolio-content" class="center-text">
 				<!-- Photos du plus récent au plus ancien -->
 
+				<div class="portfolio-group carousel-group">
+					<div class="carousel-images">
+						<a href="images/flower2.jpeg" class="carousel-item" title="">
+							<img src="images/flower2.jpeg" alt="">
+						</a>
+						<a href="images/flower.jpeg" class="carousel-item" title="">
+							<img src="images/flower.jpeg" alt="">
+						</a>
+						<a href="images/flower1.jpeg" class="carousel-item" title="">
+							<img src="images/flower1.jpeg" alt="">
+						</a>
+					</div>
+					<div class="detail">
+						<h3>Hello June</h3>
+						<p></p>
+					</div>
+				</div>
+
+				
 
 				<div class="portfolio-group" data-pinned="true">
 					<a class="portfolio-item" href="images/psg.jpeg">
@@ -434,6 +453,44 @@ http://www.templatemo.com/tm-413-flip-turn
 
 
 	</script>
+	
+
+	<!--CAROUSSEL-->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const carouselGroups = document.querySelectorAll(".carousel-group");
+
+			carouselGroups.forEach((group) => {
+				const items = group.querySelectorAll(".carousel-item");
+				let index = 0;
+
+				function showImage(i) {
+					items.forEach((item, idx) => {
+						item.classList.toggle("active", idx === i);
+					});
+				}
+
+				showImage(index); // affiche la première image
+
+				setInterval(() => {
+					index = (index + 1) % items.length;
+					showImage(index);
+				}, 1000); // change toutes les 3 secondes
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			$('.carousel-images').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				gallery: { enabled: true }
+			});
+		});
+	</script>
+
+
+	
 
 	<!---Pin-->
 	<script>
