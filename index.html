@@ -58,7 +58,7 @@ http://www.templatemo.com/tm-413-flip-turn
 				<!-- Photos du plus récent au plus ancien -->
 
 
-				<div class="portfolio-group">
+				<div class="portfolio-group" data-pinned="true">
 					<a class="portfolio-item" href="images/psg.jpeg">
 						<img src="images/psg.jpeg" alt="image 12" />
 						<div class="detail">
@@ -433,6 +433,25 @@ http://www.templatemo.com/tm-413-flip-turn
 		});
 
 
+	</script>
+
+	<!---Pin-->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const container = document.getElementById("portfolio-content");
+
+			if (!container) return;
+
+			const blocs = Array.from(container.querySelectorAll(".portfolio-group"));
+
+			// Trier les blocs : ceux épinglés d'abord (data-pinned="true")
+			const pinned = blocs.filter(bloc => bloc.getAttribute("data-pinned") === "true");
+			const nonPinned = blocs.filter(bloc => bloc.getAttribute("data-pinned") !== "true");
+
+			// Vider le container et réinsérer les blocs dans le bon ordre
+			container.innerHTML = '';
+			[...pinned, ...nonPinned].forEach(bloc => container.appendChild(bloc));
+		});
 	</script>
 </body>
 
