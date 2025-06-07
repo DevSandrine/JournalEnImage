@@ -560,11 +560,13 @@ http://www.templatemo.com/tm-413-flip-turn
 		});
 	</script>
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			$('.carousel-images').magnificPopup({
+		document.querySelectorAll('.carousel-group').forEach(group => {
+			$(group).find('.carousel-images').magnificPopup({
 				delegate: 'a',
 				type: 'image',
-				gallery: { enabled: true }
+				gallery: {
+					enabled: true
+				}
 			});
 		});
 	</script>
