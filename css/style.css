@@ -451,3 +451,25 @@ audio {
 .link-text:hover {
     color: darkblue;
 }
+
+
+/* sound */
+
+	
+	.sound-btn{
+    background: rgba(255,255,255,0.6);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 5px;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.sound-btn:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
