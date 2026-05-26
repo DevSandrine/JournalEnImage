@@ -66,6 +66,16 @@ http://www.templatemo.com/tm-413-flip-turn
         <img src="images/Peace.png" alt="shiva" />
         <div class="detail" >
             <h3> Une page se tourne 💫 </h3> 
+
+			<div class="audio-box">
+    <audio>
+        <source src="silentvoice-indian-style-rmx-532364.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="toggleAudio(this)">▶</button>
+			</div>
+
+			
             <div class="scroll-text">
                 <p>  
 					
@@ -1730,6 +1740,26 @@ les plus intellectuellement exigeantes.<br>
 				gallery: { enabled: true }
 			});
 		});
+	</script>
+
+
+
+
+
+	<!--sound-->
+
+	<script>
+function toggleAudio(btn){
+    const audio = btn.parentElement.querySelector("audio");
+
+    if(audio.paused){
+        audio.play();
+        btn.innerHTML = "❚❚";
+    } else {
+        audio.pause();
+        btn.innerHTML = "▶";
+    }
+}
 	</script>
 
 </body>
